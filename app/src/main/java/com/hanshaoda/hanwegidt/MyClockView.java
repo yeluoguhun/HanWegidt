@@ -124,6 +124,8 @@ public class MyClockView extends View {
 //        表芯
         mPaintCenter.setColor(Color.GREEN);
         canvas.drawCircle(0, 0, 4, mPaintCenter);
+
+
         super.onDraw(canvas);
 
 
