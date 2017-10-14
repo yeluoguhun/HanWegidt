@@ -25,6 +25,7 @@ public class MyClockView extends View {
     public static final float LONG_DEGREE_LENGTH = 30f;//长刻度线
     public static final float SHORT_DEGREE_LENGTH = 15f;//短刻度线
     public static final float DEFAULT_MORE_LENGTH = 35f;//针长处原点的长度
+    public static final int DEFAULT_WIDTH = 200;//默认的最小宽度
     private Paint mPaintCricle;
     private Paint mPaintOutCri;
     private Paint mPaintHour;
@@ -229,5 +230,10 @@ public class MyClockView extends View {
             floats[3] = -(float) (Math.sin((v - 270) * Math.PI / 180) * length);
         }
         return floats;
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }
